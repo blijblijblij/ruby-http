@@ -1,6 +1,6 @@
 FROM openfaas/of-watchdog:0.8.4 as watchdog
 
-FROM ruby:2.7.2-slim-buster
+FROM ruby:2.7.3-slim-buster
 
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
